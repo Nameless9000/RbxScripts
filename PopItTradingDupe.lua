@@ -1,17 +1,7 @@
-local loaded
-
-local load = function(autoexec)
-    loaded = true
-    if autoexec then
-        repeat wait() until game:IsLoaded()
-        wait(2)
-    end
-    
-    repeat wait(.5) until autodupe end
-    autodupe()
+if shared.autoexec then
+    repeat wait() until game:IsLoaded()
+    wait(2)
 end
-
-repeat wait(.5) until loaded end
 
 shared.item = shared.item or "Gummy Rainbow" -- change to item u want to duper
 
@@ -108,5 +98,3 @@ end
         warn("No errors")
     end
 end
-
-return load

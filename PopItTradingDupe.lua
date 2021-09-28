@@ -1,4 +1,4 @@
-return function(autoexec)
+local script = function(autoexec)
     if autoexec then
         repeat wait() until game:IsLoaded()
         wait(2)
@@ -102,3 +102,5 @@ return function(autoexec)
         end
     end
 end
+
+return script

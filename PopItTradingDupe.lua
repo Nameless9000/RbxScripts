@@ -93,6 +93,7 @@ end
         wait(0.05)
         dupe()
     end
+    autodupe()
 
     if success then
         warn("No errors")

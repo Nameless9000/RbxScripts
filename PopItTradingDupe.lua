@@ -1,6 +1,6 @@
 shared.item = shared.item or "Gummy Rainbow" -- change to item u want to duper
 
-shared.timing = 0.085 or shared.timing -- change to 0.05 - 0.3 depending on wifi speed
+shared.timing = shared.timing or 0.085 -- change to 0.05 - 0.3 depending on wifi speed
 
 repeat wait() until game:IsLoaded()
 wait(2)

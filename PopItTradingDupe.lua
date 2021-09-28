@@ -7,10 +7,11 @@ local load = function(autoexec)
         wait(2)
     end
     
+    repeat wait(.5) until autodupe end
     autodupe()
 end
 
-repeat wait(1) until loaded end
+repeat wait(.5) until loaded end
 
 shared.item = shared.item or "Gummy Rainbow" -- change to item u want to duper
 
@@ -102,7 +103,6 @@ end
         wait(0.05)
         dupe()
     end
-    ()
 
     if success then
         warn("No errors")

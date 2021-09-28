@@ -31,7 +31,7 @@ local script = function(autoexec)
         local TeleportService = game:GetService("TeleportService")
         local lplr = game.Players.LocalPlayer
     
-    function dupe()
+    local function dupe()
         wait(0.2)
         game:GetService("ReplicatedStorage").RemoteEvents.Jumped:FireServer()
         if shared.timing then wait(shared.timing) end
@@ -39,7 +39,7 @@ local script = function(autoexec)
     end
     
     
-        function getBoard(plr)
+       local function getBoard(plr)
             for i,v in pairs(game:GetService("Workspace").Boards:GetChildren()) do
                 local plr1 = v.Player1.Value
                 local plr2 = v.Player2.Value
@@ -55,7 +55,7 @@ local script = function(autoexec)
             end
         end
     
-        function getEmptyBoard()
+       local function getEmptyBoard()
             for i,v in pairs(game:GetService("Workspace").Boards:GetChildren()) do
                 local plr1 = v.Player1.Value
                 local plr2 = v.Player2.Value
@@ -71,7 +71,7 @@ local script = function(autoexec)
             end
         end
     
-        function autodrop(b)
+       local function autodrop(b)
             for i = 1,b do
                 game:GetService("ReplicatedStorage").RemoteEvents.Drop:FireServer(shared.item)
                 wait(0.5)
@@ -81,7 +81,7 @@ local script = function(autoexec)
             end
         end
     
-        function autodupe()
+       local function autodupe()
             getEmptyBoard()
             wait(2)
             local brd = getBoard()

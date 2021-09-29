@@ -36,7 +36,18 @@ local function dupe()
     if shared.timing then wait(shared.timing) end
     game.Players.LocalPlayer:Kick("DUPED")
 end
-
+local dropped = game.Workspace.Dropped
+        function antiPickup()
+        for i,v in pairs(dropped:GetDescendants()) do
+            if v:FindFirstChild("Owner") then
+                if v:WaitForChild("Owner").Value == lplr then
+                wait()
+                v.Parent = game:GetService("ReplicatedStorage")
+                end
+            end
+        end
+    end
+    antiPickup()
 
    local function getBoard(plr)
         for i,v in pairs(game:GetService("Workspace").Boards:GetChildren()) do
@@ -73,10 +84,16 @@ end
    local function autodrop(b)
         for i = 1,b do
             game:GetService("ReplicatedStorage").RemoteEvents.Drop:FireServer(shared.item)
+            wait()
+            antiPickup()
             wait(0.5)
             game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer(shared.item)
+            wait()
+            antiPickup()
             wait(0.5)
             game:GetService("ReplicatedStorage").RemoteEvents.Drop:FireServer(shared.item)
+            wait()
+            antiPickup()
         end
     end
 

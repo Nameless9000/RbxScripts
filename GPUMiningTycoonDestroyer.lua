@@ -1,5 +1,5 @@
 -- RIP https://www.roblox.com/games/7392774291/GPU-Mining-Tycoon-NEW
--- by Nameless9000
+-- https://v3rmillion.net/showthread.php?tid=1140190
 
 for _,plr in pairs(game.Players:GetChildren()) do
     if plr == game.Players.LocalPlayer then continue end

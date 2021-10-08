@@ -32,4 +32,4 @@ for _,plr in pairs(game.Players:GetChildren()) do
     plr.Backpack.restart1:FireServer()
 end
 
-game:GetService('TeleportService'):Teleport(game.PlaceId)
+game:GetService("Players").LocalPlayer:Kick("Time for next server lol")

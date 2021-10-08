@@ -33,5 +33,3 @@ for _,plr in pairs(game.Players:GetChildren()) do
     if plr == game.Players.LocalPlayer then continue end
     plr.Backpack.restart1:FireServer()
 end
-
-game:GetService("Players").LocalPlayer:Kick("Time for next server lol")

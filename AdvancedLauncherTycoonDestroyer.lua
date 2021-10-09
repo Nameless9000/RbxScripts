@@ -24,10 +24,10 @@ local function breakall(x)
 end
 
 local function wipe()
-    for _,LocalPlayer in ipairs(game:GetService("Players"):GetChildren()) do  
-        if LocalPlayer == LocalPlayer then continue end
+    for _,player in ipairs(game:GetService("Players"):GetChildren()) do  
+        if player == LocalPlayer then continue end
 
-        LocalPlayer.Backpack.restart1:FireServer()
+        player.Backpack.restart1:FireServer()
     end
 end
 

@@ -1,4 +1,5 @@
 -- https://v3rmillion.net/showthread.php?tid=1140358
+-- https://www.roblox.com/games/6266940721/StockRise-BETA
 --[[ how to use:
   1. run script
   2. buy stock (if u don't have any)

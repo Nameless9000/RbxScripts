@@ -1,4 +1,5 @@
 -- RIP https://www.roblox.com/games/7220965257/Advanced-Launcher-Tycoon-NEW-Beta
+-- https://v3rmillion.net/showthread.php?tid=1140336
 
 if game.PlaceId ~= 7220965257 then return game:GetService("TeleportService"):Teleport(7220965257) end
 

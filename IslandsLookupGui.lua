@@ -129,7 +129,7 @@ DisplayName.BorderSizePixel = 0
 DisplayName.Position = UDim2.new(0.025, 0, 0.325, 0)
 DisplayName.Size = UDim2.new(0.25, 0, 0.05, 0)
 DisplayName.Font = Enum.Font.SourceSans
-DisplayName.Text = "Shoe_Seller"
+DisplayName.Text = "X"
 DisplayName.TextColor3 = Color3.fromRGB(255, 255, 255)
 DisplayName.TextScaled = true
 DisplayName.TextSize = 14
@@ -143,7 +143,7 @@ Data.BackgroundColor3 = Color3.fromRGB(238, 238, 238)
 Data.BorderSizePixel = 0
 Data.Position = UDim2.new(0.3, 0, 0, 0)
 Data.Size = UDim2.new(0.7, 0, 1, 0)
-Data.AutomaticCanvasSize = Enum.AutomaticSize.XY
+Data.CanvasSize = UDim2.new(0, 0, 4, 0)
 
 UIListLayout.Parent = Data
 UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -288,7 +288,7 @@ local function loadPlayerData()
 		TemplateFrame.Parent = Data
 		TemplateFrame.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
 		TemplateFrame.BorderSizePixel = 0
-		TemplateFrame.Size = UDim2.new(0.9, 0, 0.025, 0)
+		TemplateFrame.Size = UDim2.new(0.9, 0, 0.015, 0)
 		Roundify(TemplateFrame, 0.5)
 		
 		Label.Name = math.random(tick()%math.random(tick()))

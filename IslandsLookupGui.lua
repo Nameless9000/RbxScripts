@@ -393,6 +393,7 @@ local function homePage()
 	InfoScreen.Visible = false
 	UIPageLayout:JumpTo(PlayerList)
 	loadPlayerList()
+	Title.Text = "Players"
 end
 
 ac(JoinIsland.MouseButton1Click:Connect(joinIsland))

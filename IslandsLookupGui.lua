@@ -1,3 +1,5 @@
+-- thread: https://v3rmillion.net/showthread.php?tid=1141680
+
 local ScreenGui = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")

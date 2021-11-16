@@ -12,8 +12,7 @@ old = hookmetamethod(game, "__namecall", function(self, ...)
     local method = getnamecallmethod()
 
     if not checkcaller() and getgenv().freeitem == true and self == r and method == "FireServer" and args[1] == "purchase" then
-        local item = m.getItemById(nil,args[2])
-        rs.Events.PickAndDrop.TakeToolRE:FireServer(item.Name)
+        rs.Events.PickAndDrop.TakeToolRE:FireServer(args[2])
         return nil
     end
 

@@ -1,6 +1,17 @@
 -- THIS DOES NOT LET U SELL THEM | backspace to drop item
 
-getgenv().freeitem = true
+local itemTypes = {
+	NORMAL = 1, 
+	GOLDEN = 2, 
+	RAINBOW = 3, 
+	COLORED = 4
+}
+
+getgenv().freeItem = true
+getgenv().itemType = itemTypes.COLORED
+
+if getgenv().ran == true then return end
+getgenv().ran = true
 
 local rs = game:GetService("ReplicatedStorage")
 local r = rs.Events.Coin.CoinMarketRE
@@ -12,7 +23,9 @@ old = hookmetamethod(game, "__namecall", function(self, ...)
     local method = getnamecallmethod()
 
     if not checkcaller() and getgenv().freeitem == true and self == r and method == "FireServer" and args[1] == "purchase" then
-        rs.Events.PickAndDrop.TakeToolRE:FireServer(args[2])
+        x = tostring(args[2])
+        x = x:gsub(x:sub(1,1),getgenv().itemType,1)
+        rs.Events.PickAndDrop.TakeToolRE:FireServer(tonumber(x))
         return nil
     end
 
